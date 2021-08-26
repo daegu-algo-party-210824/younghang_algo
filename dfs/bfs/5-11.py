@@ -1,10 +1,8 @@
 # 미로탈출 문제
+
 # 탈출하는 최소의 거리를 구한다.
-
-
-
 # 1. 큐에 넣을 때 거리까지 같이 넣을것인가 ?
-# 2. 
+# 2. ??????????????????????????????
 
 from collections import deque 
 n,m = map(int,input().split())
@@ -36,6 +34,5 @@ def bfs(starty,startx) :
 
 print(bfs(0,0))
 
-
-
-        
+# 예는 들어 tuple를 정렬한다면 
+# 정렬 기준이 들어가게 만들어보자.        
