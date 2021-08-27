@@ -35,4 +35,4 @@ def bfs(starty,startx) :
 print(bfs(0,0))
 
 # 예는 들어 tuple를 정렬한다면 
-# 정렬 기준이 들어가게 만들어보자.        
+# 정렬 기준이 들어가게 만들어보자. 1. sorted (array, key - >>>>>> 이거 확인하기)
