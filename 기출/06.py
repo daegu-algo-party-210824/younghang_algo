@@ -1,6 +1,9 @@
 ## 큐를 이용한 문제 풀이 
 ## 정확도 ok! 
 ## 효율성 실패!
+
+## -> 우선순위 큐로 확장해야한다.
+
 from collections import deque
 def solution (food_times,k) :
     q = deque([])
