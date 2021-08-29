@@ -103,3 +103,6 @@ for k in range(1,n+1):
 # itertools:combination  / collections :heapq 헷갈린다. 
 # heapq 는 그냥 import 하면되고  heapq.heappush() heapq.heappop()
 
+################################################
+# .join을 사용하면 리스트를 문자열로 바꿀 수 있다.
+print(''.join(list111))
