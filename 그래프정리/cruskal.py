@@ -1,4 +1,4 @@
-# 그냥 크루스칼 외워라.
+# 그냥 크루스칼 외워라. (외워라.이해하지마라.)
 def find_parent (parent,a) :
     if a != parent[a] :
         parent[a] = find_parent(a)

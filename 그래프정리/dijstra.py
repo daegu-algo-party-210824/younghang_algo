@@ -40,7 +40,7 @@ q=[]
 heapq (q,(0,start))
 while q :
     dis , now = heapq.heappop(q)
-    if (current > distance[now]):
+    if (dis > distance[now]):
         continue
     for i in adj[now] :
         cost = i[1] + dis
