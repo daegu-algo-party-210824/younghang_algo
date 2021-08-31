@@ -86,10 +86,11 @@ def dijkstra(start) :
 n = 10
 graph = [[0]*n for i in range(n)]
 print(graph)
-for k in range(1,n+1):
-    for i in range(1,n+1):     # 여기가 시작점
-        for j in range(1,n+1): # 여기가 종료점
+for k in range(n):
+    for i in range(n):     # 여기가 시작점
+        for j in range(n): # 여기가 종료점
             graph[i][j] = min (graph[i][k]+ graph[k][j] , graph[i][j])
+
 ##############################################
 # SQL 정리.
 # ROWNUM > 10 같이 
@@ -105,4 +106,9 @@ for k in range(1,n+1):
 
 ################################################
 # .join을 사용하면 리스트를 문자열로 바꿀 수 있다.
-print(''.join(list111))
+#print(''.join(list111))
+
+a = [(1,2),(2,3),(4,2)]
+a= sorted(a,key = lambda  x : x[1])
+print(a)
+
