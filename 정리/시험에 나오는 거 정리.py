@@ -97,9 +97,6 @@ for k in range(n):
 ##############################################
 # 최대값은 int(1e9)로 선언하자.
 #
-
-
-
 ###############################################
 # itertools:combination  / collections :heapq 헷갈린다. 
 # heapq 는 그냥 import 하면되고  heapq.heappush() heapq.heappop()
@@ -108,7 +105,13 @@ for k in range(n):
 # .join을 사용하면 리스트를 문자열로 바꿀 수 있다.
 #print(''.join(list111))
 
+
+# 두번째 sort를 할 때에는 ke 
 a = [(1,2),(2,3),(4,2)]
 a= sorted(a,key = lambda  x : x[1])
 print(a)
+
+##cns 리뷰 
+## 1. 1<= dd <= 30이면 어떻게 처리하지 ?
+
 
