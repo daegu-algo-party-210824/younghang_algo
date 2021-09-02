@@ -113,5 +113,8 @@ print(a)
 
 ##cns 리뷰 
 ## 1. 1<= dd <= 30이면 어떻게 처리하지 ?
-
+## 2.
+## 이런 형식으로 카피를 할 수 있다.
+import copy 
+b= copy.deepcopy(a)
 
