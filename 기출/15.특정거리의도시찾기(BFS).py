@@ -1,3 +1,5 @@
+# 거리가 1이라서 bfs가 더 용이하다.
+
 from collections import deque
 
 n,m,k,x = map (int,input().split())
