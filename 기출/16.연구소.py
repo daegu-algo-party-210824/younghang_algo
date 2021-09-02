@@ -14,7 +14,7 @@ def bfs(arr):
         for j in range(M):
             if arr[i][j] == 2 :
                 q.append((i,j))
-
+                
     while q:
         y,x = q.popleft()
         for i in range(4):
