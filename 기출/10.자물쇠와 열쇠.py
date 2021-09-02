@@ -1,4 +1,5 @@
-
+# 1.직접 다 만들기
+# 2.함수화를 해서 간단하게 만들기.
 def rotate(arr,n) :
     ret = [[0]*n for i in range(n)]
     for i in range(n):
@@ -47,10 +48,6 @@ def solution(key, lock):
     return False 
         
 
-  
-    
-
-    return False
 
 print(solution ([[0,0,0],[1,0,0],[0,1,1]],[[1,1,1],[1,1,0],[1,0,1]]))
 
