@@ -23,6 +23,7 @@ def bfs(starty,startx) :
         y    = temp[0]
         x    = temp[1]
         cnt  = temp[2]
+        print("(y,x,cnt)",y,x,cnt)
         #여기에 값이 들어가는게 맞나 확인바람.
         if (y == n-1 and x == m-1) :
             return cnt
@@ -31,6 +32,8 @@ def bfs(starty,startx) :
             nx = x + dir[i][1]
             if (nx >=0 and nx < m and ny >=0 and ny < n and arr[ny][nx] == '1' and visited[ny][nx] == False ):
                 q.append((ny,nx,cnt+1))
+
+                visited[ny][nx] = True
 
 print(bfs(0,0))
 

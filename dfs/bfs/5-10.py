@@ -6,6 +6,7 @@ def dfs (y,x):
     global visited
     global arr
     visited[y][x] = True
+    print("(y,x) : ",y,x)
     for i in range(4) :
         ny = y + dir[i][0]
         nx = x + dir[i][1]
@@ -30,6 +31,7 @@ for i in range(n) :
         if visited[i][j] == False and arr[i][j] == '0':
             dfs(i,j)
             cnt +=1
+            print(cnt)
 print(cnt)
 
 # TC
