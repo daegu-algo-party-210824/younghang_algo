@@ -1,9 +1,5 @@
 # 백준 알고리즘 1922 네트워크 연결
 # 크루스칼 : 주의점 parent를 최상단으로 모두 초기화해야한다.
-N,M = map(int,input().split())
-
-parent = [i for i in range(N+1)]
-
 
 #최상단 부모를 찾는 알고리즘.
 def unionfind(parent,a) :
@@ -20,24 +16,32 @@ def union(parent,a,b) :
         parent[b] = a
     else :
         parent[a]=b
-edge = []
-sum1 =0
-for i in range(M):
-    temp = list(map(int,input().split()))
-    edge.append ((temp[2],temp[0],temp[1]))
-    sum1 += temp[2]
-input()
-    
-edge = sorted(edge,key=lambda x : x[0])
 
-result = []
+while(True) :
+    N,M = map(int,input().split())
+    parent = [i for i in range(N+1)]
+    edge = []
+    sum1=0 
+    parent = [i for i in range(N+1)]
+    for i in range(M):
+        temp = list(map(int,input().split()))
+        if (i ==0 and temp[0] == 0 and temp[1] == 0):
+            break
+        edge.append ((temp[2],temp[0],temp[1]))
+        sum1 += temp[2]
 
-for i in range(M):
-    a = unionfind(parent,edge[i][1])
-    b = unionfind(parent,edge[i][2])
+    edge = sorted(edge,key=lambda x : x[0])
 
-    if (a != b) :
-        union(parent,edge[i][1],edge[i][2])
-        result.append(edge[i][0])
+    result = []
 
-print(sum1- sum(result))
+    for i in range(M):
+        a = unionfind(parent,edge[i][1])
+        b = unionfind(parent,edge[i][2])
+
+        if (a != b) :
+            union(parent,edge[i][1],edge[i][2])
+            result.append(edge[i][0])
+
+    print(sum1- sum(result))
+
+   
