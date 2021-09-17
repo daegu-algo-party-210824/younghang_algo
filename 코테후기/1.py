@@ -3,8 +3,6 @@
 # 3. 구현 (날짜 계산) (deepcopy import copy) copy.deepcopy를 사용하자.
 # 4. ??? 기억이 안남. 케이크자르기 (brute force)
 
-
-
 a = [(1,2),(2,1),(3,1)]
 a.sort(key = lambda x : x[0])
 

@@ -37,7 +37,7 @@ print(distance)
 
 ######################################
 q=[]
-heapq (q,(0,start))
+heapq  (q,(0,start))
 while q :
     dis , now = heapq.heappop(q)
     if (dis > distance[now]):
