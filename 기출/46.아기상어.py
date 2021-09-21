@@ -15,12 +15,14 @@ arr = []
 for i in range(n) :
     arr.append(list(map(int,input().split())))
 
-def find(visited,min_value,arr,size):
+# 값을 찾을 때 먹을 수 있는 + min거리와 같은거를 갱신한다.
+def find_eat(visited,min_value,arr,size):
     for i in range(len(visited)):
         for j in range(len(visited)):
             if visited[i][j] == min_value and arr[i][j] >0 and size > arr[i][j]:
                 return (i,j)
     return (-1,-1)
+
 #시작점 가지고 끝점을 반환한다.
 def bfs (arr,size,sy,sx):
     global n
@@ -32,7 +34,7 @@ def bfs (arr,size,sy,sx):
     q = deque([])
     q.append((sy,sx))
     short = []
-    # 갈수 있는 거리를 모두 판단한 뒤에 
+    # 그냥 일단 다 간다. 조건에 맞게.
     while q :
         y,x = q.popleft()
 
@@ -48,14 +50,14 @@ def bfs (arr,size,sy,sx):
                     q.append((ny,nx))
     return visited,min_value
 
-def find_yx (arr):    
+def find_start (arr):    
     for i in range(n) :
         for j in range(n) :
             if (arr[i][j] == 9 ):
                 return [i,j] 
 
 
-sy,sx= find_yx(arr)
+sy,sx= find_start(arr)
 time = 0
 size = 2
 size_cnt = 0
@@ -64,13 +66,12 @@ min_value = int(1e9)
 while (True) :
     beforey, beforex = sy,sx
     visited,min_value = bfs(arr,size,sy,sx)
-    sy,sx = find(visited,min_value,arr,size)
-    #탈출 조건 (갈 수 있는 지 없는지)
+    sy,sx = find_eat(visited,min_value,arr,size)
     
-    if (min_value == int(1e9) or (sy ==-1 and sx ==-1)):
+    if (min_value == int(1e9)):
         break
     time += (min_value-1)
-    
+
     size_cnt +=1
     if (size == size_cnt) :
         size +=1
