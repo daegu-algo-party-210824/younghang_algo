@@ -1,5 +1,6 @@
 # 43.어두운길.py
 
+
 # 크루스칼 써서 최소 스패닝 트리를 구한다.
 # 이후 현재의 크기와 mst의 간선의 합을 빼준다.
 
@@ -13,7 +14,7 @@ def find (parent, a) :
 
 def union(parent,a,b) :
     a = find(parent,a)
-    b= find (parent,b)
+    b = find (parent,b)
     if (a<b) :
         parent[b] = a 
     else :

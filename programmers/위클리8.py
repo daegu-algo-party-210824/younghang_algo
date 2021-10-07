@@ -42,4 +42,12 @@ def solution(sizes):
     return min (max1*max2, max3*max4)
 
 
+
+# 발전 
+# (큰수, 작은수) 형식으로 넣는다. 그리고 max1, max2 곱한것을 구한다.
+
+
+
+
+
 print(solution([[60, 50], [30, 70], [60, 30], [80, 40]]))
